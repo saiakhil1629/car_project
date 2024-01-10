@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="booking.css">
+  <title>Car Runt - Car Details and Booking</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Car Runt Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Booking</a></li>
+      <li><a href="#">More</a></li>
+      <li><a href="#">Contents</a></li>
+    </ul>
+      <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search for a car...">
+    <button id="search-btn">Search</button>
+  </div>
+  </nav>
+
+  <!-- Car Details and Booking Section -->
+  <section class="car-details">
+    <div class="car-info">
+      <h2 id="car-model"></h2>
+      <p id="car-description"></p>
+      <ul>
+        <li>Price: 1500rs/day</li>
+        <li>Transmission: Automatic</li>
+        <li>Seats: 4</li>
+        <!-- Add more car details here -->
+      </ul>
+    </div>
+    <div class="car-photos">
+      <img src="car1.jpg" alt="Car Photos">
+      <!-- Add more car photos here -->
+    </div>
+    <div class="booking">
+      <h3>Book Now</h3>
+      <form>
+        <label for="pickup-date">Pickup Date:</label>
+        <input type="date" id="pickup-date" required>
+
+        <label for="return-date">Return Date:</label>
+        <input type="date" id="return-date" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Other Car Suggestions -->
+  <section class="other-cars">
+    <h2>Other Cars</h2>
+    <div class="car-suggestions">
+      <div class="car">
+        <img src="car2.jpg" alt="Car Model 2">
+        <h3>Car Model 2</h3>
+        <p>Description of Car Model 2...</p>
+        <!-- Add more car suggestions here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <footer class="footer">
+    <div class="contact-info">
+      <h4>Contact Us</h4>
+      <p>Phone: +91 8977885516</p>
+      <p>Email: info@car-runt.com</p>
+    </div>
+  </footer>
+
+  <script>
+    const carModel = localStorage.getItem('carModel');
+    const carDescription = localStorage.getItem('carDescription');
+    const carImage = localStorage.getItem('carImage');
+
+    document.getElementById('car-model').textContent = carModel;
+    document.getElementById('car-description').textContent = carDescription;
+    document.getElementById('car-image').setAttribute('src', carImage);
+  </script>
+</body>
+</html>

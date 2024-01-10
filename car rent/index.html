@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Runt - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Akhil CarRunts">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Booking</a></li>
+      <li><a href="#">More</a></li>
+      <li><a href="#">Contents</a></li>
+    </ul>
+      <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search for a car...">
+    <button id="search-btn">Search</button>
+  </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <h1>Welcome to Car Runt</h1>
+    <p>Find the perfect car for your needs!</p>
+  </section>
+
+  <!-- Car Showcase -->
+  <section class="car-showcase">
+    <div class="car">
+      <img src="car1.jpg" alt="Car 1">
+      <a href="booking.html"><h3>Car Model 1</h3></a>
+      <p>Description of Car Model 1...</p>
+    </div>
+    <div class="car">
+      <img src="car2.jpg" alt="Car 2">
+      <h3>Car Model 2</h3>
+      <p>Description of Car Model 2...</p>
+    </div>
+    <div class="car">
+      <img src="car2.jpg" alt="Car 2">
+      <h3>Car Model 2</h3>
+      <p>Description of Car Model 2...</p>
+    </div>
+   
+    <!-- Add more cars here -->
+  </section>
+
+  <!-- Contact Info -->
+  <footer class="footer">
+    <div class="contact-info">
+      <h4>Contact Us</h4>
+      <p>Phone: 8977885516</p>
+      <p>Email: akhilcarinfo@car-runt.com</p>
+    </div>
+  </footer>
+  <script>
+    const carModel = localStorage.getItem('carModel');
+    const carDescription = localStorage.getItem('carDescription');
+    const carImage = localStorage.getItem('carImage');
+
+    document.getElementById('car-model').textContent = carModel;
+    document.getElementById('car-description').textContent = carDescription;
+    document.getElementById('car-image').setAttribute('src', carImage);
+  </script>
+</body>
+</html>
